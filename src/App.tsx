@@ -33,7 +33,10 @@ export default function App() {
 
   return (
     <div>
-      <h1 class="text-3xl mb-5">Dogify</h1>
+      <h1 class="text-3xl mb-5">
+        <span class="line-through mr-3">Dogify</span>
+        <span>Petify</span>
+      </h1>
       <div class="flex gap-4">
         <Button variant="contained" onClick={getDogs}>Get dogs</Button>
         <Button variant="contained" onClick={getCats}>Get cats</Button>
