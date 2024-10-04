@@ -5,7 +5,7 @@ export default function App() {
   const [pics, setPics] = createSignal<string[]>([]);
 
   async function getDogs() {
-    const dogsFetch = await fetch('https://dog.ceo/api/breeds/image/random/20')
+    const dogsFetch = await fetch('https://dog.ceo/api/breeds/image/random/10')
     const parsedDogs = await dogsFetch.json()
     if(!parsedDogs.message) {
       alert("There was an error fetching the dogs.")
@@ -16,7 +16,7 @@ export default function App() {
   }
   
   async function getCats() {
-    const catsFetch = await fetch('https://api.thecatapi.com/v1/images/search?limit=20')
+    const catsFetch = await fetch('https://api.thecatapi.com/v1/images/search?limit=10')
     const parsedCats = await catsFetch.json()
     if(!parsedCats) {
       alert("There was an error fetching the cats.")
